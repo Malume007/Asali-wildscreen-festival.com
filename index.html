@@ -5,84 +5,276 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Asali Wild Screen Festival | Tabora, Tanzania</title>
   <style>
-    :root{ --gold:#FFB300; --black:#111; --white:#fff; }
-    *{margin:0;padding:0;box-sizing:border-box;font-family: Arial, sans-serif;}
-    body{background:var(--white);color:var(--black); padding-top:65px}
+    :root{
+      --gold:#d97706;
+      --black:#0f172a;
+      --white:#ffffff;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family: system-ui,-apple-system,Segoe UI,Arial,sans-serif; scroll-behavior:smooth}
+    body{background:var(--white);color:var(--black);line-height:1.7}
 
-    /* HEADER SIMPLE */
-    header{background:var(--black); padding:10px 5%; position:fixed; top:0; width:100%; z-index:50; border-bottom:3px solid var(--gold)}
-    nav{display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:auto}
-   .logo-wrap{display:flex; align-items:center; gap:10px; text-decoration:none}
-   .logo-wrap img{height:40px; border-radius:50%; border:2px solid var(--gold)}
-   .logo-text{color:var(--gold); font-weight:800; font-size:15px}
-   .menu svg{width:24px; color:var(--gold); cursor:pointer}
+    /* ANIMATION: Fade In Up when scrolling */
+.reveal{opacity:0; transform:translateY(30px); transition:all.8s ease}
+.reveal.active{opacity:1; transform:translateY(0)}
 
-    /* HERO IMAGE 1 TU - HAKUNA SLIDER */
-   .hero{width:100%; height:60vh; background:url('https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; text-align:center; color:var(--white); background-color:var(--black)}
-   .hero-content{background:rgba(0,0,0,.6); padding:30px; border-radius:15px; border:2px solid var(--gold)}
-   .hero h1{font-size:32px; color:var(--gold); margin-bottom:10px}
-   .hero p{font-size:15px; max-width:600px; margin:auto}
-   .btn{background:var(--gold); color:var(--black); padding:12px 25px; border-radius:50px; text-decoration:none; font-weight:800; display:inline-block; margin-top:15px}
+    header{background:transparent;backdrop-filter:blur(0px);color:#fff;padding:18px 5%;position:fixed;top:0;left:0;right:0;z-index:50;transition:all.3s ease}
+    /* ANIMATION: Header shrinks on scroll */
+    header.scrolled{background:rgba(15,23,42,.95);backdrop-filter:blur(8px);padding:10px 5%;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+    header nav{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto}
+.logo-wrap{display:flex; align-items:center; gap:10px; text-decoration:none; transition:transform.3s}
+.logo-wrap:hover{transform:scale(1.05)}
+.logo-wrap span{font-size:16px; font-weight:800; color:var(--gold); letter-spacing:.5px; transition:font-size.3s}
+    header.scrolled.logo-wrap span{font-size:14px}
+    header a{color:#fff;text-decoration:none;margin-left:16px;font-size:14px;font-weight:600;position:relative}
+    header a::after{content:''; position:absolute; width:0; height:2px; bottom:-4px; left:0; background-color:var(--gold); transition:width.3s}
+    header a:hover::after{width:100%}
 
-    section{padding:60px 5%; max-width:1000px; margin:auto; text-align:center}
-   .title{font-size:28px; font-weight:800; color:var(--gold); margin-bottom:20px}
-   .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:15px; margin-top:20px}
-   .gallery img{width:100%; height:200px; object-fit:cover; border-radius:10px; border:2px solid var(--gold)}
-   
-   .qr{background:var(--black); color:var(--white); padding:20px; border-radius:10px; margin-top:20px}
-   .qr img{width:180px; background:white; padding:5px; border-radius:5px}
-   footer{background:var(--black); color:#ccc; text-align:center; padding:20px; border-top:3px solid var(--gold)}
+.hero{min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 5%;
+      background: linear-gradient(rgba(15,23,42,.75), rgba(15,23,42,.75)), url('https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg') center/cover fixed no-repeat;
+      animation:zoomBg 20s infinite alternate ease-in-out}
+    /* ANIMATION: Background slow zoom */
+    @keyframes zoomBg{0%{background-size:100%}100%{background-size:110%}}
+.hero h1{font-size:52px;color:var(--white);font-weight:800;line-height:1.2;max-width:800px; animation:fadeInDown 1s ease}
+.hero p.tagline{font-size:20px;max-width:650px;margin:12px auto;color:var(--gold); font-style:italic; font-weight:700; animation:fadeInDown 1s ease.2s both}
+.hero p.sub{font-size:18px;max-width:650px;margin:18px auto;color:#e5e7eb; animation:fadeInDown 1s ease.4s both}
+    @keyframes fadeInDown{from{opacity:0; transform:translateY(-20px)} to{opacity:1; transform:translateY(0)}}
 
-   @media(max-width:768px){ .gallery{grid-template-columns:1fr} .hero{height:50vh} .hero h1{font-size:24px}}
+.btns{display:flex; gap:12px; justify-content:center; margin-top:24px; flex-wrap:wrap; animation:fadeInUp 1s ease.6s both}
+    @keyframes fadeInUp{from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:translateY(0)}}
+.btn{background:var(--gold);color:var(--black);padding:16px 28px;border-radius:12px;text-decoration:none;font-weight:800;border:none;cursor:pointer;font-size:16px;
+      transition: all.3s ease; box-shadow:0 4px 15px rgba(217,119,6,.3)}
+    /* ANIMATION: Button hover lift */
+.btn:hover{transform:translateY(-4px) scale(1.05); box-shadow:0 8px 25px rgba(217,119,6,.4)}
+.btn.btn-outline{background:transparent;color:var(--white);border:2px solid var(--white); box-shadow:none}
+.btn.btn-outline:hover{background:var(--white);color:var(--black)}
+
+    section{padding:100px 5%;max-width:1100px;margin:auto; overflow:hidden}
+.section-title{text-align:center;margin-bottom:40px;font-size:36px;font-weight:800}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.card{background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);border-top:4px solid var(--gold);
+      transition: all.4s ease; cursor:pointer}
+    /* ANIMATION: Card hover lift */
+.card:hover{transform:translateY(-10px); box-shadow:0 20px 40px rgba(217,119,6,.2)}
+.card h3{color:var(--black);margin-bottom:12px;font-size:20px}
+.card li{margin-bottom:8px; font-size:15px; list-style:none; padding-left:20px; position:relative}
+.card li::before{content:"• "; color:var(--gold); font-weight:bold; position:absolute; left:0}
+
+    footer{background:var(--black);color:#cbd5e1;text-align:center;padding:40px 5%;font-size:14px}
+    hr{border:none; border-top:1px solid #e5e7eb; margin:40px 0}
   </style>
 </head>
 <body>
 
-  <header>
+  <header id="navbar">
     <nav>
       <a href="#" class="logo-wrap">
-        <img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="Logo">
-        <span class="logo-text">ASALIWILDSCREEN FESTIVAL</span>
+        <img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="Logo" style="height:45px; width:45px; border-radius:50%; object-fit:cover; border:2px solid var(--gold)">
+        <span>ASALI WILD SCREEN</span>
       </a>
-      <div class="menu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg></div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#tickets">Tickets</a>
+        <a href="#visit">Visit</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
   </header>
 
-  <!-- HERO 1 PICHA TU -->
-  <div class="hero">
-    <div class="hero-content">
+  <section class="hero">
+    <div>
       <h1>🐝 Asali Wild Screen Festival</h1>
-      <p>Where Culture, Nature & Creativity Collide. Tabora, Tanzania - The Land of Honey, Tobacco & Untold Stories.</p>
-      <a href="#tickets" class="btn">🎟️ Get Your Pass Now</a>
+      <p class="tagline">Where Culture, Nature & Creativity Meet</p>
+      <p class="sub">Tabora, Tanzania - The Land of Honey and Tobacco</p>
+      <div class="btns">
+        <a href="#tickets" class="btn">Buy Ticket Now</a>
+        <a href="#visit" class="btn btn-outline">Plan Your Visit</a>
+      </div>
     </div>
-  </div>
+  </section>
 
   <section id="about">
-    <h2 class="title">🌍 Welcome to Tabora</h2>
-    <p><strong>Karibu Tabora!</strong> From <strong>Shomari Ibrahim</strong>, Founder. A celebration of Honey, Film, Art, Culture, and Agriculture.</p>
-  </section>
-
-  <section id="gallery" style="background:#FFF8E1">
-    <h2 class="title">📸 Festival Gallery</h2>
-    <div class="gallery">
-      <img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="Walkathon">
-      <img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="Honey">
-      <img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="Film">
+    <h2 class="section-title reveal">🌍 Welcome to Tabora – The Heart of Tanzania</h2>
+    <div class="reveal" style="transition-delay:.1s">
+      <p><strong>Karibu Tabora!</strong></p>
+      <p>A warm welcome to Tabora - Tanzania from <strong>Shomari Ibrahim</strong>, owner and founder of Asali Wild Screen Festival. A celebration of tasting honey, Asali walk a thon, Tours film, art, culture, and agriculture in the land of honey and tobacco.</p>
+      <p>Tabora, Tanzania’s largest region, is a land of golden savannas, ancient trade routes, and thriving farms. From the buzzing beehives of the Miombo woodlands to the historic streets once walked by explorers and traders, Tabora is a living story - and you are invited to experience it all.</p>
+    </div>
+    <hr>
+    <h3 class="section-title reveal" style="font-size:28px; margin-top:40px;">🎬 About the Festival</h3>
+    <div class="reveal" style="transition-delay:.2s">
+      <p>Asali Wild Screen Festival is a one-of-a-kind event that unites tasting honey, tours film, business network, traditional arts, sustainable farming, and tourism. Each year, artists, farmers, filmmakers, and travelers gather in Tabora to explore creativity and culture through cinema, honey, and heritage.</p>
     </div>
   </section>
 
-  <section id="tickets" style="background:var(--black); color:var(--white);">
-    <h2 class="title" style="color:var(--white)">🎟️ Tickets</h2>
-    <p>General: TSh 50,000 | VIP: TSh 100,000</p>
-    <div class="qr">
-      <h3 style="color:var(--gold)">📱 Pay with NMB QR</h3>
-      <a href="https://merchant.nmbbank.co.tz/qr/0KUhFO9v1w9U4DFr0uQB2Q" target="_blank">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://merchant.nmbbank.co.tz/qr/0KUhFO9v1w9U4DFr0uQB2Q" alt="NMB QR">
-      </a>
+  <section id="highlights" style="background:#fffbeb">
+    <h2 class="section-title reveal">🎥 Festival Highlights</h2>
+    <div class="cards">
+      <div class="card reveal" style="transition-delay:.1s">
+        <h3>🎞️ Film & Arts</h3>
+        <ul><li>Open-air film screenings under the stars.</li><li>Documentaries on nature & African identity.</li><li>Beeswax sculpture exhibitions.</li></ul>
+      </div>
+      <div class="card reveal" style="transition-delay:.2s">
+        <h3>🍯 Honey & Tobacco Tours</h3>
+        <ul><li>Guided visits to local beekeeping farms.</li><li>Discover tobacco cultivation process.</li><li>Sustainable farming techniques.</li></ul>
+      </div>
+      <div class="card reveal" style="transition-delay:.3s">
+        <h3>🎭 Traditional Arts & Culture</h3>
+        <ul><li>Nyamwezi, Yege, Swezi and Sukuma dances.</li><li>Drumming & storytelling evenings.</li><li>Urambo Museum & Livingstone’s Tembe.</li></ul>
+      </div>
+      <div class="card reveal" style="transition-delay:.4s">
+        <h3>🌳 Nature & Adventure</h3>
+        <ul><li>Birdwatching safaris.</li><li>Cycling through farmlands.</li><li>Night bonfire folklore sessions.</li></ul>
+      </div>
     </div>
   </section>
 
-  <footer><p>🐝 Asali Wild Screen Festival – Tabora, Tanzania</p></footer>
+  <!-- SEHEMU MPYA YA TICKETS CART 4 -->
+  <section id="tickets" style="background:var(--black); color:var(--white); text-align:center">
+    <h2 class="section-title reveal" style="color:var(--white)">🎟️ Chagua Ticket Yako</h2>
+    <p class="reveal" style="transition-delay:.1s; max-width:700px; margin:auto; margin-bottom:40px; color:#cbd5e1">
+      Ungana nasi Asali Wild Screen Festival. Lipa salama kupitia NMB Mastercard Gateway.
+    </p>
+
+    <div class="cards" style="max-width:1200px; margin:auto">
+
+      <!-- CART 1: SHIRIKI VIBES -->
+      <div class="card reveal" style="background:rgba(255,255,255,.05); border:1px solid rgba(217,119,6,.3); border-top:4px solid var(--gold); text-align:center; transition-delay:.1s">
+        <h3 style="color:var(--gold)">🎉 Shiriki Vibes</h3>
+        <p style="font-size:32px; font-weight:800; margin:12px 0;">TSh 50,000</p>
+        <ul style="text-align:left; min-height:120px">
+          <li>General Access Festival Grounds</li>
+          <li>Open-air Film Screenings</li>
+          <li>Music & Cultural Performances</li>
+        </ul>
+        <form class="paymentForm" data-amount="50000" data-plan="Shiriki Vibes">
+          <button type="submit" class="btn" style="width:100%; margin-top:10px">💳 Lipa TSh 50K</button>
+        </form>
+      </div>
+
+      <!-- CART 2: VIP -->
+      <div class="card reveal" style="background:rgba(255,255,255,.05); border:1px solid rgba(217,119,6,.3); border-top:4px solid var(--gold); text-align:center; transform:scale(1.05); transition-delay:.2s">
+        <h3 style="color:var(--gold)">⭐ VIP</h3>
+        <p style="font-size:32px; font-weight:800; margin:12px 0;">TSh 100,000</p>
+        <ul style="text-align:left; min-height:120px">
+          <li>Everything in Vibes +</li>
+          <li>VIP Seating Area</li>
+          <li>Welcome Drink & Snacks</li>
+          <li>Fast Track Entry</li>
+        </ul>
+        <form class="paymentForm" data-amount="100000" data-plan="VIP">
+          <button type="submit" class="btn" style="width:100%; margin-top:10px">💳 Lipa TSh 100K</button>
+        </form>
+      </div>
+
+      <!-- CART 3: PLATINUM -->
+      <div class="card reveal" style="background:rgba(255,255,255,.05); border:1px solid rgba(217,119,6,.3); border-top:4px solid var(--gold); text-align:center; transition-delay:.3s">
+        <h3 style="color:var(--gold)">💎 Platinum</h3>
+        <p style="font-size:32px; font-weight:800; margin:12px 0;">$100 USD</p>
+        <ul style="text-align:left; min-height:120px">
+          <li>Everything in VIP +</li>
+          <li>Backstage Access</li>
+          <li>Meet & Greet with Artists</li>
+          <li>Exclusive Gift Pack</li>
+        </ul>
+        <form class="paymentForm" data-amount="100" data-currency="USD" data-plan="Platinum">
+          <button type="submit" class="btn" style="width:100%; margin-top:10px">💳 Lipa $100</button>
+        </form>
+      </div>
+
+      <!-- CART 4: WILDSCREEN FUND -->
+      <div class="card reveal" style="background:rgba(255,255,255,.05); border:1px solid rgba(217,119,6,.3); border-top:4px solid var(--gold); text-align:center; transition-delay:.4s">
+        <h3 style="color:var(--gold)">🐝 WILDSCREEN FUND</h3>
+        <p style="font-size:18px; font-weight:600; margin:12px 0;">Support the Culture</p>
+        <ul style="text-align:left; min-height:120px">
+          <li>Donate to support young artists</li>
+          <li>Fund community honey projects</li>
+          <li>Keep Tabora stories alive</li>
+        </ul>
+        <form class="paymentForm" data-amount="0" data-plan="Wildscreen Fund">
+          <input type="number" name="donation" placeholder="Enter Amount TSh" style="width:100%; padding:12px; border-radius:8px; border:1px solid #ccc; margin-bottom:10px; text-align:center; color:var(--black)">
+          <button type="submit" class="btn btn-outline" style="width:100%">🤝 Donate Now</button>
+        </form>
+      </div>
+
+    </div>
+    <p style="font-size:12px; color:#94a3b8; margin-top:30px;">🔒 Malipo salama 100% - Powered by NMB Mastercard Gateway | MID: TEST993455000226</p>
+  </section>
+
+  <section id="visit">
+    <h2 class="section-title reveal">🏡 Stay with Us</h2>
+    <p class="reveal" style="transition-delay:.1s">Experience the warmth of Tabora through our handpicked eco-lodges, heritage inns, and community guesthouses. Enjoy comfort, authenticity, and nature — all within reach of the festival grounds.</p>
+    <hr>
+    <h2 class="section-title reveal">☀️ When to Visit</h2>
+    <p class="reveal" style="transition-delay:.1s"><strong>Festival Season:</strong> June – August (dry, sunny, perfect for outdoor screenings and tours).</p>
+  </section>
+
+  <section id="contact" style="background:#fffbeb; text-align:center">
+    <h2 class="section-title reveal">✨ Join the Celebration</h2>
+    <div class="reveal" style="transition-delay:.1s">
+      <p>📍 <strong>Location:</strong> Tabora, Tanzania</p>
+      <p>📧 <strong>Contact:</strong> shorjibral@outlook.com | +255 681 457 824</p>
+      <div style="margin-top:20px">
+        <a href="https://wa.me/255681457824" class="btn" target="_blank">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>🐝 Asali Wild Screen Festival – Tabora, Tanzania</p>
+    <p>"Sweet Culture. Wild Stories. Real Tanzania."</p>
+  </footer>
+
+<script>
+  // JS for Scroll Animations + Sticky Header
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 50){
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    for(let i = 0; i < reveals.length; i++){
+      let windowHeight = window.innerHeight;
+      let elementTop = reveals[i].getBoundingClientRect().top;
+      let elementVisible = 100;
+      if(elementTop < windowHeight - elementVisible){
+        reveals[i].classList.add("active");
+      }
+    }
+  });
+  // Trigger once on load
+  window.dispatchEvent(new Event('scroll'));
+
+  // JS MPYA YA MALIPO CART 4
+  document.querySelectorAll('.paymentForm').forEach(form => {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      let amount = this.dataset.amount;
+      let currency = this.dataset.currency || 'TZS';
+      let plan = this.dataset.plan;
+
+      // Kama ni Fund, chukua amount kutoka input
+      if(plan === 'Wildscreen Fund'){
+        amount = this.querySelector('input[name="donation"]').value;
+        if(!amount || amount < 1000){
+          alert('Tafadhali weka kiasi cha angalau TSh 1000');
+          return;
+        }
+        currency = 'TZS';
+      }
+
+      alert(`TEST MODE ON\nUmechagua: ${plan}\nKiasi: ${currency} ${amount}\n\nHatua inayofuata: Tukiwa na \`checkoutId\` kutoka NMB, tutakupeleka kwenye ukurasa wao wa kulipia.`);
+
+      // HAPA NDO LINK YA NMB ITAKUJA BAADAE
+      // window.location.href = "https://test-nmbbank.mtf.gateway.mastercard.com/checkout/pay?amount="+amount+"&currency="+currency+"&checkoutId=XXX";
+    });
+  });
+</script>
 
 </body>
-</html>
+  </html>
