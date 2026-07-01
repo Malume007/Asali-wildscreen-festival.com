@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AsaliWild Screen Festival | Tabora, Tanzania</title>
+  <title>Asali Wild Screen Festival | Tabora, Tanzania</title>
   <style>
     :root{
       --gold:#d97706;
@@ -13,144 +13,81 @@
     *{margin:0;padding:0;box-sizing:border-box;font-family: system-ui,-apple-system,Segoe UI,Arial,sans-serif; scroll-behavior:smooth}
     body{background:var(--white);color:var(--black);line-height:1.7}
 
-    /* HEADER NZURI BLACK + GOLD. HAPANA NJANO */
+    /* HEADER BLACK + GOLD */
     header{background:rgba(15,23,42,.95); backdrop-filter:blur(8px); padding:12px 5%; position:sticky; top:0; z-index:50; border-bottom:2px solid var(--gold)}
     header nav{display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:auto}
-   .logo-wrap{display:flex; align-items:center}
-   .logo-wrap img{height:45px; width:auto}
+  .logo-wrap{display:flex; align-items:center}
+  .logo-wrap img{height:45px; width:auto}
+  .header-icons{display:flex; gap:20px; align-items:center}
+  .header-icons svg{width:24px; height:24px; cursor:pointer; color:var(--gold)}
+  .dropdown{position:relative; display:inline-block}
+  .dropdown-content{display:none; position:absolute; right:0; background-color:var(--black); min-width:200px; box-shadow:0px 8px 16px 0px rgba(0,0,0,0.5); z-index:1; border-radius:12px; overflow:hidden; top:40px; border:1px solid var(--gold)}
+  .dropdown-content a{color:var(--white); padding:14px 16px; text-decoration:none; display:block; font-weight:600}
+  .dropdown-content a:hover{background-color:var(--gold); color:var(--black)}
+  .dropdown:hover.dropdown-content{display:block}
 
-   .header-icons{display:flex; gap:20px; align-items:center}
-   .header-icons svg{width:24px; height:24px; cursor:pointer; color:var(--gold)}
-   .menu-btn{cursor:pointer}
-
-    /* DROPDOWN MENU YA VIDOTI 3 */
-   .dropdown{position:relative; display:inline-block}
-   .dropdown-content{display:none; position:absolute; right:0; background-color:var(--black); min-width:200px; box-shadow:0px 8px 16px 0px rgba(0,0,0,0.5); z-index:1; border-radius:12px; overflow:hidden; top:40px; border:1px solid var(--gold)}
-   .dropdown-content a{color:var(--white); padding:14px 16px; text-decoration:none; display:block; font-weight:600}
-   .dropdown-content a:hover{background-color:var(--gold); color:var(--black)}
-   .dropdown:hover.dropdown-content{display:block}
-
-    /* SLIDER YA PICHA 3 - MOTO ZAIDI YA YAS */
-   .slider-container{position:relative; width:100%; height:70vh; overflow:hidden; background:var(--black)}
-   .slides{display:flex; width:300%; height:100%; transition:transform.8s ease-in-out}
-   .slide{width:100%; height:100%; flex-shrink:0; position:relative}
-   .slide img{width:100%; height:100%; object-fit:cover}
-   .slide-text{position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent, rgba(15,23,42,.85)); color:var(--white); padding:40px 5%; text-align:center}
-   .slide-text h1{font-size:36px; font-weight:800}
-   .slide-text p{max-width:600px; margin:10px auto 20px; color:#e5e7eb}
-
-    /* VIBUTTON VYA NEXT/PREV */
-   .slider-btn{position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,.4); color:var(--gold); border:2px solid var(--gold); width:50px; height:50px; border-radius:50%; font-size:24px; cursor:pointer; z-index:10; transition:.3s}
-   .slider-btn:hover{background:var(--gold); color:var(--black)}
-   .prev{left:20px}
-   .next{right:20px}
-
-    /* DOTS CHINI YA SLIDER */
-   .dots-container{text-align:center; position:absolute; bottom:20px; left:0; right:0; z-index:10}
-   .dot{height:12px; width:12px; margin:0 5px; background-color:rgba(255,255,255,.5); border-radius:50%; display:inline-block; cursor:pointer; transition:.3s}
-   .dot.active,.dot:hover{background-color:var(--gold)}
-
-    /* BUTTON YA CHINI */
-   .btn{background:var(--gold); color:var(--black); padding:14px 28px; border-radius:50px; text-decoration:none; font-weight:800; border:none; cursor:pointer; font-size:16px; display:inline-flex; align-items:center; gap:8px; transition:.3s}
-   .btn:hover{transform:scale(1.05); box-shadow:0 0 20px rgba(217,119,6,.5)}
+    /* SLIDER YA PICHA 3 */
+  .slider-container{position:relative; width:100%; height:70vh; overflow:hidden; background:var(--black)}
+  .slides{display:flex; width:300%; height:100%; transition:transform.8s ease-in-out}
+  .slide{width:100%; height:100%; flex-shrink:0; position:relative}
+  .slide img{width:100%; height:100%; object-fit:cover}
+  .slide-text{position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent, rgba(15,23,42,.85)); color:var(--white); padding:40px 5%; text-align:center}
+  .slide-text h1{font-size:36px; font-weight:800}
+  .slider-btn{position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,.4); color:var(--gold); border:2px solid var(--gold); width:50px; height:50px; border-radius:50%; font-size:24px; cursor:pointer; z-index:10}
+  .prev{left:20px}.next{right:20px}
+  .dots-container{text-align:center; position:absolute; bottom:20px; left:0; right:0; z-index:10}
+  .dot{height:12px; width:12px; margin:0 5px; background-color:rgba(255,255,255,.5); border-radius:50%; display:inline-block; cursor:pointer}
+  .dot.active{background-color:var(--gold)}
+  .btn{background:var(--gold); color:var(--black); padding:14px 28px; border-radius:50px; text-decoration:none; font-weight:800; border:none; cursor:pointer; font-size:16px; display:inline-flex; align-items:center; gap:8px}
 
     /* SEHEMU ZINGINE */
     section{padding:80px 5%; max-width:1100px; margin:auto}
-   .section-title{text-align:center; margin-bottom:40px; font-size:32px; font-weight:800}
-   .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px}
-   .card{background:#fff; padding:30px; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,.08); border-top:4px solid var(--gold)}
-   .card h3{color:var(--black); margin-bottom:12px; font-size:20px}
+  .section-title{text-align:center; margin-bottom:40px; font-size:32px; font-weight:800}
+  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px}
+  .card{background:#fff; padding:30px; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,.08); border-top:4px solid var(--gold)}
+
+    /* SEHEMU MPYA YA QR CODE */
+  .qr-section{background:rgba(255,255,255,.05); padding:30px; border-radius:20px; margin-top:40px; border:1px dashed var(--gold)}
+  .qr-section img{width:220px; height:220px; margin:20px auto; display:block; border:8px solid white; border-radius:12px; background:white}
+  .qr-section p{max-width:500px; margin:auto; color:#cbd5e1}
 
     footer{background:var(--black); color:#cbd5e1; text-align:center; padding:40px 5%; font-size:14px; border-top:2px solid var(--gold)}
-
-    /* SEARCH BOX */
-   .search-box{display:none; position:absolute; top:65px; right:5%; background:var(--black); padding:10px; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,.5); border:1px solid var(--gold)}
-   .search-box input{border:1px solid var(--gold); background:var(--white); padding:10px; border-radius:6px; width:200px; color:var(--black)}
-   .search-box.active{display:block}
+  .search-box{display:none; position:absolute; top:65px; right:5%; background:var(--black); padding:10px; border-radius:8px; border:1px solid var(--gold)}
+  .search-box input{border:1px solid var(--gold); padding:10px; border-radius:6px; width:200px; color:var(--black)}
+  .search-box.active{display:block}
   </style>
 </head>
 <body>
 
-  <!-- HEADER BLACK + GOLD -->
   <header>
     <nav>
-      <a href="#" class="logo-wrap">
-        <img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="Asali Wild Screen Logo">
-      </a>
+      <a href="#" class="logo-wrap"><img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="Asali Wild Screen Logo"></a>
       <div class="header-icons">
         <svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>
-        <div class="dropdown">
-          <svg class="menu-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
-          <div class="dropdown-content">
-            <a href="#about">About</a>
-            <a href="#highlights">Highlights</a>
-            <a href="#visit">Visit</a>
-            <a href="#contact">Contact / Read Me</a>
-          </div>
+        <div class="dropdown"><svg class="menu-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+          <div class="dropdown-content"><a href="#about">About</a><a href="#highlights">Highlights</a><a href="#visit">Visit</a><a href="#contact">Contact / Read Me</a></div>
         </div>
       </div>
     </nav>
     <div class="search-box" id="searchBox"><input type="text" placeholder="Tafuta kwenye site..."></div>
   </header>
 
-  <!-- SLIDER YA PICHA 3 ZINAZO SLIDE -->
   <div class="slider-container">
     <div class="slides" id="slides">
-      <!-- SLIDE 1 -->
-      <div class="slide">
-        <img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="Festival 1">
-        <div class="slide-text">
-          <h1> Asali Wild Screen</h1>
-          <p>Where Culture, Nature & Creativity Meet. Tabora, Tanzania.</p>
-          <a href="#tickets" class="btn">Buy Ticket Now →</a>
-        </div>
-      </div>
-      <!-- SLIDE 2 -->
-      <div class="slide">
-        <img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="Festival 2">
-        <div class="slide-text">
-          <h1>🎬 Film Under The Stars</h1>
-          <p>Experience African Cinema, Art, and Heritage in the heart of Tabora.</p>
-          <a href="#highlights" class="btn">Explore Films →</a>
-        </div>
-      </div>
-      <!-- SLIDE 3 -->
-      <div class="slide">
-        <img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="Festival 3">
-        <div class="slide-text">
-          <h1>🍯 Taste The Land of Honey</h1>
-          <p>Join our Honey Tours, Cultural Dances, and Adventure Safaris.</p>
-          <a href="#visit" class="btn">Plan Your Visit →</a>
-        </div>
-      </div>
+      <div class="slide"><img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="Festival 1"><div class="slide-text"><h1>🐝 Asali Wild Screen</h1><p>Where Culture, Nature & Creativity Meet.</p><a href="#tickets" class="btn">Buy Ticket Now →</a></div></div>
+      <div class="slide"><img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="Festival 2"><div class="slide-text"><h1>🎬 Film Under The Stars</h1><p>Experience African Cinema in Tabora.</p><a href="#highlights" class="btn">Explore Films →</a></div></div>
+      <div class="slide"><img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="Festival 3"><div class="slide-text"><h1>🍯 Taste The Land of Honey</h1><p>Join our Honey Tours & Safaris.</p><a href="#visit" class="btn">Plan Your Visit →</a></div></div>
     </div>
-
-    <!-- BUTTONS ZA NEXT/PREV -->
     <button class="slider-btn prev" onclick="moveSlide(-1)">❮</button>
     <button class="slider-btn next" onclick="moveSlide(1)">❯</button>
-
-    <!-- DOTS -->
-    <div class="dots-container">
-      <span class="dot active" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+    <div class="dots-container"><span class="dot active" onclick="currentSlide(1)"></span><span class="dot" onclick="currentSlide(2)"></span><span class="dot" onclick="currentSlide(3)"></span></div>
   </div>
 
-  <section id="about">
-    <h2 class="section-title">🌍 Welcome to Tabora</h2>
-    <p><strong>Karibu Tabora!</strong> A warm welcome from <strong>Shomari Ibrahim</strong>, founder of Asali Wild Screen Festival. A celebration of honey, film, art, culture, and agriculture.</p>
-  </section>
+  <section id="about"><h2 class="section-title">🌍 Welcome to Tabora</h2><p><strong>Karibu Tabora!</strong> A warm welcome from <strong>Shomari Ibrahim</strong>, founder of Asali Wild Screen Festival.</p></section>
 
-  <section id="highlights" style="background:#fffbeb">
-    <h2 class="section-title">🎥 Festival Highlights</h2>
-    <div class="cards">
-      <div class="card"><h3>🎞️ Film & Arts</h3><p>Open-air screenings, Documentaries, Beeswax sculptures.</p></div>
-      <div class="card"><h3>🍯 Honey & Tobacco Tours</h3><p>Visit local farms, Discover cultivation, Sustainable farming.</p></div>
-    </div>
-  </section>
+  <section id="highlights" style="background:#fffbeb"><h2 class="section-title">🎥 Festival Highlights</h2><div class="cards"><div class="card"><h3>🎞️ Film & Arts</h3><p>Open-air screenings, Documentaries.</p></div><div class="card"><h3>🍯 Honey & Tobacco Tours</h3><p>Visit local farms, Discover cultivation.</p></div></div></section>
 
-  <!-- TICKETS CART 4 -->
+  <!-- TICKETS CART 4 + QR CODE CHINI -->
   <section id="tickets" style="background:var(--black); color:var(--white); text-align:center">
     <h2 class="section-title" style="color:var(--white)">🎟️ Chagua Ticket Yako</h2>
     <div class="cards" style="max-width:1200px; margin:auto">
@@ -159,6 +96,19 @@
       <div class="card" style="background:rgba(255,255,255,.05); border:1px solid var(--gold);"><h3 style="color:var(--gold)">💎 Platinum</h3><p style="font-size:32px; font-weight:800;">$100 USD</p><form class="paymentForm" data-amount="100" data-currency="USD" data-plan="Platinum"><button type="submit" class="btn" style="width:100%; margin-top:10px">💳 Lipa $100</button></form></div>
       <div class="card" style="background:rgba(255,255,255,.05); border:1px solid var(--gold);"><h3 style="color:var(--gold)">🐝 WILDSCREEN FUND</h3><form class="paymentForm" data-amount="0" data-plan="Wildscreen Fund"><input type="number" name="donation" placeholder="Enter Amount TSh" style="width:100%; padding:12px; border-radius:8px; border:1px solid var(--gold); margin:10px 0; text-align:center; color:var(--black)"><button type="submit" class="btn" style="width:100%; background:transparent; border:2px solid var(--gold); color:var(--gold)">🤝 Donate Now</button></form></div>
     </div>
+
+    <!-- SEHEMU MPYA YA QR CODE YA NMB -->
+    <div class="qr-section reveal">
+      <h3 style="color:var(--gold); font-size:24px;">📱 Au Lipa kwa QR Code</h3>
+      <p>Kama hutaki kutumia kadi, scan QR Code hii hapa chini ukitumia App ya NMB au App yoyote ya benki. Salama na haraka.</p>
+
+      <a href="https://merchant.nmbbank.co.tz/qr/0KUhFO9v1w9U4DFr0uQB2Q" target="_blank">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://merchant.nmbbank.co.tz/qr/0KUhFO9v1w9U4DFr0uQB2Q" alt="NMB Pay QR Code Asali Festival">
+      </a>
+
+      <p style="font-size:14px; margin-top:15px;"><strong>MID: TEST993455000226</strong> | Asali Wild Screen Festival</p>
+    </div>
+    <p style="font-size:12px; color:#94a3b8; margin-top:30px;">🔒 Powered by NMB Mastercard Gateway</p>
   </section>
 
   <section id="visit"><h2 class="section-title">🏡 Stay with Us</h2><p>Eco-lodges, heritage inns, and community guesthouses in Tabora.</p></section>
@@ -166,34 +116,17 @@
   <footer><p>🐝 Asali Wild Screen Festival – Tabora, Tanzania</p></footer>
 
 <script>
-  // JS YA SLIDER AUTOMATIC KILA SEC 4 + MANUAL
-  let slideIndex = 1;
-  let autoSlide;
-
-  function showSlides(n) {
-    let slides = document.getElementById('slides');
-    let dots = document.getElementsByClassName('dot');
-    if (n > 3) {slideIndex = 1}
-    if (n < 1) {slideIndex = 3}
-    slides.style.transform = 'translateX(-' + (slideIndex - 1) * 100 + '%)';
-    for (let i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
-    dots[slideIndex-1].className += " active";
-  }
-
+  // JS YA SLIDER
+  let slideIndex = 1; let autoSlide;
+  function showSlides(n) { let slides = document.getElementById('slides'); let dots = document.getElementsByClassName('dot'); if (n > 3) {slideIndex = 1} if (n < 1) {slideIndex = 3} slides.style.transform = 'translateX(-' + (slideIndex - 1) * 100 + '%)'; for (let i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); } dots[slideIndex-1].className += " active"; }
   function moveSlide(n) { showSlides(slideIndex += n); resetAutoSlide(); }
   function currentSlide(n) { showSlides(slideIndex = n); resetAutoSlide(); }
-
-  function autoPlay() { autoSlide = setInterval(() => { moveSlide(1); }, 4000); } // Sekunde 4
+  function autoPlay() { autoSlide = setInterval(() => { moveSlide(1); }, 4000); }
   function resetAutoSlide() { clearInterval(autoSlide); autoPlay(); }
-
-  // Anza slider mara moja
-  autoPlay();
-  showSlides(slideIndex);
+  autoPlay(); showSlides(slideIndex);
 
   // JS YA SEARCH ICON
-  document.getElementById('searchIcon').addEventListener('click', () => {
-    document.getElementById('searchBox').classList.toggle('active');
-  });
+  document.getElementById('searchIcon').addEventListener('click', () => { document.getElementById('searchBox').classList.toggle('active'); });
 
   // JS YA MALIPO CART 4 - TEST MODE
   document.querySelectorAll('.paymentForm').forEach(form => {
@@ -207,4 +140,4 @@
 </script>
 
 </body>
-  </html>b
+        </html>
