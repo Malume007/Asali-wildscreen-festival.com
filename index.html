@@ -1,46 +1,48 @@
 <!DOCTYPE html>
-<html lang="sw">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asali Wildscreen Festival Tanzania | Utalii, Marathon & Soko la Asali</title>
+  <title>Asali Wild Screen Festival | Tabora, Tanzania</title>
   <style>
     :root{
-      --gold:#d97706; /* Rangi ya asali iliyotiwa moto kama YAS nyekundu */
+      --gold:#d97706; /* Rangi ya asali */
       --black:#0f172a; 
       --white:#ffffff;
     }
     *{margin:0;padding:0;box-sizing:border-box;font-family: system-ui,-apple-system,Segoe UI,Arial,sans-serif}
-    body{background:var(--white);color:var(--black);line-height:1.6}
+    body{background:var(--white);color:var(--black);line-height:1.7}
     
     header{background:rgba(15,23,42,.9);backdrop-filter:blur(6px);color:#fff;padding:14px 5%;position:fixed;top:0;left:0;right:0;z-index:50}
     header nav{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto}
     .logo-wrap{display:flex; align-items:center; gap:10px; text-decoration:none;}
-    .logo-wrap span{font-size:18px; font-weight:800; color:var(--gold); letter-spacing:.5px;}
-    header a{color:#fff;text-decoration:none;margin-left:20px;font-size:15px;font-weight:600}
+    .logo-wrap span{font-size:16px; font-weight:800; color:var(--gold); letter-spacing:.5px;}
+    header a{color:#fff;text-decoration:none;margin-left:16px;font-size:14px;font-weight:600}
     header a:hover{color:var(--gold)}
 
     .hero{min-height:92vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 5%; 
-      background: linear-gradient(rgba(15,23,42,.7), rgba(15,23,42,.7)), url('https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg') center/cover no-repeat;}
-    .hero h2{font-size:48px;color:var(--white);font-weight:800;line-height:1.2;max-width:800px}
-    .hero p{font-size:18px;max-width:650px;margin:18px auto;color:#e5e7eb}
+      background: linear-gradient(rgba(15,23,42,.75), rgba(15,23,42,.75)), url('https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg') center/cover no-repeat;}
+    .hero h1{font-size:44px;color:var(--white);font-weight:800;line-height:1.2;max-width:800px}
+    .hero p.tagline{font-size:18px;max-width:650px;margin:12px auto;color:#e5e7eb; font-style:italic;}
+    .hero p.sub{font-size:16px;max-width:650px;margin:18px auto;color:#e5e7eb}
     .btns{display:flex; gap:12px; justify-content:center; margin-top:24px; flex-wrap:wrap}
     .btn{background:var(--gold);color:var(--black);padding:14px 24px;border-radius:10px;text-decoration:none;font-weight:800;border:none;cursor:pointer;font-size:15px}
     .btn:hover{opacity:.9; transform:translateY(-2px)}
     .btn.btn-outline{background:transparent;color:var(--white);border:2px solid var(--white)}
     .btn.btn-outline:hover{background:var(--white);color:var(--black)}
 
-    section{padding:80px 5%;max-width:1200px;margin:auto}
-    .section-title{text-align:center;margin-bottom:40px;font-size:32px;font-weight:800}
+    section{padding:80px 5%;max-width:1000px;margin:auto}
+    .section-title{text-align:center;margin-bottom:30px;font-size:30px;font-weight:800; display:flex; align-items:center; justify-content:center; gap:10px;}
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-    .card{background:#fff;padding:28px;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.08);border-top:4px solid var(--gold)}
-    .card h3{color:var(--black);margin-bottom:10px;font-size:20px}
+    .card{background:#fff;padding:24px;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.08);border-top:4px solid var(--gold)}
+    .card h3{color:var(--black);margin-bottom:10px;font-size:18px; display:flex; align-items:center; gap:8px;}
+    .card ul{list-style: none; padding-left:0}
+    .card li{margin-bottom:8px; font-size:15px;}
+    .card li::before{content:"• "; color:var(--gold); font-weight:bold}
     
-    table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;margin-top:20px;box-shadow:0 8px 24px rgba(0,0,0,.06)}
-    th,td{padding:14px 16px;text-align:left;border-bottom:1px solid #f1f5f9;font-size:15px}
-    th{background:var(--gold);color:var(--black);font-weight:800}
-    
-    footer{background:var(--black);color:#cbd5e1;text-align:center;padding:24px;font-size:14px}
+    footer{background:var(--black);color:#cbd5e1;text-align:center;padding:30px 5%;font-size:14px}
+    footer p{margin-top:8px; font-style:italic;}
+    hr{border:none; border-top:1px solid #e5e7eb; margin:30px 0}
   </style>
 </head>
 <body>
@@ -48,68 +50,146 @@
   <header>
     <nav>
       <a href="#" class="logo-wrap">
-        <img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="Asali Wildscreen Festival Logo" style="height:44px; width:44px; border-radius:50%; object-fit:cover; border:2px solid var(--gold)">
-        <span>ASALI WILDSCREEN</span>
+        <img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="Asali Wild Screen Festival Logo" style="height:40px; width:40px; border-radius:50%; object-fit:cover; border:2px solid var(--gold)">
+        <span>ASALI WILD SCREEN</span>
       </a>
       <div>
-        <a href="#utalii">Utalii</a>
-        <a href="#asali">Soko</a>
-        <a href="#wasiliana">Wasiliana</a>
+        <a href="#about">About</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#visit">Visit</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
   </header>
 
   <section class="hero">
     <div>
-      <h2>Asali Wildscreen Festival Tanzania 🍯</h2>
-      <p>Utalii wa kipekee Tabora, Marathon za Kifahari, na Soko la Moja kwa Moja la Asali Safi kutoka kwa Wafugaji. Karibu Uzoefu wa Asili.</p>
+      <h1>🐝 Asali Wild Screen Festival – Tabora, Tanzania</h1>
+      <p class="tagline">Where Culture, Nature & Creativity Meet</p>
+      <p class="sub">A celebration of tasting honey, film, art, culture, and agriculture in the land of honey and tobacco.</p>
       <div class="btns">
-        <a href="#asali" class="btn">Nunua Asali Sasa</a>
-        <a href="#utalii" class="btn btn-outline">Gundua Utalii</a>
+        <a href="#contact" class="btn">Join the Celebration</a>
+        <a href="#visit" class="btn btn-outline">Plan Your Visit</a>
       </div>
     </div>
   </section>
 
-  <section id="utalii">
-    <h2 class="section-title">Huduma Zetu za Utalii</h2>
+  <section id="about">
+    <h2 class="section-title">🌍 Welcome to Tabora – The Heart of Tanzania</h2>
+    <p><strong>Karibu Tabora!</strong></p>
+    <p>A warm welcome to Tabora - Tanzania from <strong>Shomari Ibrahim</strong>, owner and founder of Asali Wild Screen Festival. </p>
+    <p>Tabora, Tanzania’s largest region, is a land of golden savannas, ancient trade routes, and thriving farms. From the buzzing beehives of the Miombo woodlands to the historic streets once walked by explorers and traders, Tabora is a living story - and you are invited to experience it all.</p>
+    <hr>
+    <h3 class="section-title" style="font-size:24px; margin-top:40px;">🎬 About the Festival</h3>
+    <p>Asali Wild Screen Festival is a one-of-a-kind event that unites tasting honey, film, business network, traditional arts, sustainable farming, and tourism.</p>
+    <p>Each year, artists, farmers, filmmakers, and travelers gather in Tabora to explore creativity and culture through cinema, honey, and heritage. This festival is a platform for both local and international filmmakers to share their stories - and for visitors to connect with the rich traditions and agricultural pride of central Tanzania.</p>
+    <hr>
+    <h3 class="section-title" style="font-size:24px; margin-top:40px;">🍃 Our Vision</h3>
+    <p>To position Asali Wild Screen Festival as East Africa’s leading cultural and agro-tourism experience - blending honey, tobacco, art, and heritage into a sustainable future for the people of Tabora.</p>
+    <hr>
+    <h3 class="section-title" style="font-size:24px; margin-top:40px;">💛 Our Mission & Goals</h3>
+    <div class="card">
+      <ul>
+        <li>Celebrate tasting honey, film and traditional art that reflect Tanzania’s culture and landscapes.</li>
+        <li>Promote eco-friendly honey and tobacco farming as symbols of sustainability and creativity.</li>
+        <li>Empower local communities and artisans through training, workshops, and exhibitions.</li>
+        <li>Create meaningful connections between artists, travelers, and nature lovers.</li>
+        <li>Showcase Tabora’s hidden gems - its heritage, natural beauty, and warm hospitality.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="highlights" style="background:#fffbeb">
+    <h2 class="section-title">🎥 Festival Highlights</h2>
     <div class="cards">
       <div class="card">
-        <h3>Utalii wa Ndani Tabora</h3>
-        <p>Ziara za misitu ya miombo, vivutio vya kihistoria, na utamaduni wa watu wa Tabora. Tunaandaa vikundi vya kawaida na VIP.</p>
+        <h3>🎞️ Film & Arts</h3>
+        <ul>
+          <li>Open-air film screenings under the stars.</li>
+          <li>Documentaries and shorts on nature, sustainability, and African identity.</li>
+          <li>Beeswax sculpture and tobacco-leaf craft exhibitions.</li>
+          <li>Filmmaker panels, art workshops, and cultural dialogues.</li>
+        </ul>
       </div>
       <div class="card">
-        <h3>Marathon & Mikutano</h3>
-        <p>Marathon za hisani, mikusanyiko ya viongozi, na car meet-ups za magari ya kifahari. Tunapanga, tunatangaza, tunasimamia.</p>
+        <h3>🍯 Honey & Tobacco Tours</h3>
+        <ul>
+          <li>Guided visits to local beekeeping farms - learn hive-making, harvesting, honey tasting.</li>
+          <li>Discover the process of tobacco cultivation, from seed to curing barns.</li>
+          <li>Explore sustainable farming techniques that protect the environment and empower rural families.</li>
+        </ul>
       </div>
       <div class="card">
-        <h3>Utalii Nje ya Tabora</h3>
-        <p>Packages za kwenda Serengeti, Ngorongoro, Zanzibar na mipaka. Kwa groups, families na makampuni.</p>
+        <h3>🎭 Traditional Arts & Culture</h3>
+        <ul>
+          <li>Live performances of Nyamwezi, Yege, Swezi and Sukuma dances.</li>
+          <li>Drumming, storytelling, and traditional music evenings.</li>
+          <li>Visits to Urambo Museum and Livingstone’s Tembe, showcasing Tabora’s historic Swahili-Arab heritage.</li>
+          <li>Cultural village experiences where you can learn local crafts, language, cuisine.</li>
+        </ul>
       </div>
+      <div class="card">
+        <h3>🌳 Nature & Adventure</h3>
+        <ul>
+          <li>Birdwatching and photography safaris.</li>
+          <li>Cycling tours through honey and tobacco farmlands.</li>
+          <li>Night bonfire sessions with local elders sharing folklore and bee myths.</li>
+        </ul>
+      </div>
+    </div>
+    <hr style="margin-top:40px">
+    <h3 class="section-title" style="font-size:24px; margin-top:40px;">🌱 Sustainability Commitment</h3>
+    <p>Asali Wild Screen Festival is proudly eco-conscious and community-driven. We work closely with local cooperatives, women’s groups, and youth initiatives to:</p>
+    <div class="card">
+      <ul>
+        <li>Promote eco-beekeeping and organic tobacco farming.</li>
+        <li>Use solar power, zero-plastic policies, and eco-friendly waste systems.</li>
+        <li>Support local artisans by showcasing and selling handmade crafts.</li>
+        <li>Dedicate a share of festival proceeds to reforestation and bee habitat restoration.</li>
+      </ul>
     </div>
   </section>
 
-  <section id="asali" style="background:#fffbeb">
-    <h2 class="section-title">Soko la Asali - Bei za Leo</h2>
-    <p style="text-align:center;max-width:600px;margin:0 auto 8px">Nunua moja kwa moja kutoka kwa wafugaji. Hakuna dalali. Bei safi, asali safi.</p>
-    <table>
-      <tr><th>Aina ya Asali</th><th>Kilo 1</th><th>Lita 1</th><th>WhatsApp</th></tr>
-      <tr><td>Asali Safi ya Misitu</td><td>18,000 TZS</td><td>25,000 TZS</td><td>+255 7XX XXX</td></tr>
-      <tr><td>Asali ya Maua Mix</td><td>15,000 TZS</td><td>22,000 TZS</td><td>+255 7XX XXX</td></tr>
-      <tr><td>Asali Premium Mkubwa</td><td>20,000 TZS</td><td>28,000 TZS</td><td>+255 7XX XXX</td></tr>
-    </table>
+  <section id="visit">
+    <h2 class="section-title">🏡 Stay with Us</h2>
+    <p>Experience the warmth of Tabora through our handpicked eco-lodges, heritage inns, and community guesthouses. Enjoy comfort, authenticity, and nature — all within reach of the festival grounds.</p>
+    <div class="card">
+      <p><strong>Each stay includes:</strong></p>
+      <ul>
+        <li>Locally sourced meals featuring honey, peanuts, and tropical fruits.</li>
+        <li>Cultural interactions with nearby villages.</li>
+        <li>Access to festival screenings and guided tours.</li>
+      </ul>
+    </div>
+    <hr>
+    <h2 class="section-title">☀️ When to Visit</h2>
+    <p><strong>Festival Season:</strong> June – August (dry, sunny, perfect for outdoor screenings and tours).</p>
+    <p><strong>Climate:</strong> 13°C / 56°F – 34°C / 104°F</p>
+    <p><strong>Rain Seasons:</strong></p>
+    <ul>
+      <li>Short rains: November – December</li>
+      <li>Long rains: April – May</li>
+    </ul>
   </section>
 
-  <section id="wasiliana" style="text-align:center">
-    <h2 class="section-title">Wasiliana Nasi Sasa</h2>
-    <p style="font-size:16px">Tabora, Tanzania | Email: info@asalifestival.co.tz</p>
+  <section id="contact" style="background:#fffbeb; text-align:center">
+    <h2 class="section-title">✨ Join the Celebration</h2>
+    <p>Discover a new way to explore Tanzania - through film, honey, and heritage.</p>
+    <p>Let the sounds of drums, buzzing bees, and rolling cameras fill your senses.</p>
+    <p><strong>Be part of the story. Be part of the Honey Wild Screen Festival.</strong></p>
+    <br>
+    <p>📍 <strong>Location:</strong> Tabora, Tanzania</p>
+    <p>📧 <strong>Contact:</strong> <a href="mailto:shorjibral@outlook.com">shorjibral@outlook.com</a> | +255 681 457 824 | +255 652 130 898</p>
     <div style="margin-top:20px">
-      <a href="https://wa.me/255652130898" class="btn" target="_blank">Chat WhatsApp Sasa</a>
+      <a href="https://wa.me/255681457824" class="btn" target="_blank">Chat on WhatsApp</a>
     </div>
   </section>
 
   <footer>
-    © 2026 Asali Wildscreen Festival Tanzania. Hakimiliki zote zimehifadhiwa.
+    <p>🐝 Asali Wild Screen Festival – Tabora, Tanzania</p>
+    <p>"Sweet Culture. Wild Stories. Real Tanzania."</p>
+    <p style="margin-top:16px; font-style:normal; font-size:12px;">© 2026 Asali Wild Screen Festival. All Rights Reserved.</p>
   </footer>
 
 </body>
-  </html>
+                                                                                       </html>
