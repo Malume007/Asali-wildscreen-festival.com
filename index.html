@@ -14,50 +14,50 @@
     body{background:var(--white);color:var(--black);line-height:1.7}
 
     /* ANIMATION: Fade In Up when scrolling */
-  .reveal{opacity:0; transform:translateY(30px); transition:all.8s ease}
-  .reveal.active{opacity:1; transform:translateY(0)}
+ .reveal{opacity:0; transform:translateY(30px); transition:all.8s ease}
+ .reveal.active{opacity:1; transform:translateY(0)}
 
     header{background:transparent;backdrop-filter:blur(0px);color:#fff;padding:18px 5%;position:fixed;top:0;left:0;right:0;z-index:50;transition:all.3s ease}
     /* ANIMATION: Header shrinks on scroll */
     header.scrolled{background:rgba(15,23,42,.95);backdrop-filter:blur(8px);padding:10px 5%;box-shadow:0 4px 20px rgba(0,0,0,.2)}
     header nav{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto}
-  .logo-wrap{display:flex; align-items:center; gap:10px; text-decoration:none; transition:transform.3s}
-  .logo-wrap:hover{transform:scale(1.05)}
-  .logo-wrap span{font-size:16px; font-weight:800; color:var(--gold); letter-spacing:.5px; transition:font-size.3s}
+ .logo-wrap{display:flex; align-items:center; gap:10px; text-decoration:none; transition:transform.3s}
+ .logo-wrap:hover{transform:scale(1.05)}
+ .logo-wrap span{font-size:16px; font-weight:800; color:var(--gold); letter-spacing:.5px; transition:font-size.3s}
     header.scrolled.logo-wrap span{font-size:14px}
     header a{color:#fff;text-decoration:none;margin-left:16px;font-size:14px;font-weight:600;position:relative}
     header a::after{content:''; position:absolute; width:0; height:2px; bottom:-4px; left:0; background-color:var(--gold); transition:width.3s}
     header a:hover::after{width:100%}
 
-  .hero{min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 5%;
+ .hero{min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 5%;
       background: linear-gradient(rgba(15,23,42,.75), rgba(15,23,42,.75)), url('https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg') center/cover fixed no-repeat;
       animation:zoomBg 20s infinite alternate ease-in-out}
     /* ANIMATION: Background slow zoom */
     @keyframes zoomBg{0%{background-size:100%}100%{background-size:110%}}
-  .hero h1{font-size:52px;color:var(--white);font-weight:800;line-height:1.2;max-width:800px; animation:fadeInDown 1s ease}
-  .hero p.tagline{font-size:20px;max-width:650px;margin:12px auto;color:var(--gold); font-style:italic; font-weight:700; animation:fadeInDown 1s ease.2s both}
-  .hero p.sub{font-size:18px;max-width:650px;margin:18px auto;color:#e5e7eb; animation:fadeInDown 1s ease.4s both}
+ .hero h1{font-size:52px;color:var(--white);font-weight:800;line-height:1.2;max-width:800px; animation:fadeInDown 1s ease}
+ .hero p.tagline{font-size:20px;max-width:650px;margin:12px auto;color:var(--gold); font-style:italic; font-weight:700; animation:fadeInDown 1s ease.2s both}
+ .hero p.sub{font-size:18px;max-width:650px;margin:18px auto;color:#e5e7eb; animation:fadeInDown 1s ease.4s both}
     @keyframes fadeInDown{from{opacity:0; transform:translateY(-20px)} to{opacity:1; transform:translateY(0)}}
 
-  .btns{display:flex; gap:12px; justify-content:center; margin-top:24px; flex-wrap:wrap; animation:fadeInUp 1s ease.6s both}
+ .btns{display:flex; gap:12px; justify-content:center; margin-top:24px; flex-wrap:wrap; animation:fadeInUp 1s ease.6s both}
     @keyframes fadeInUp{from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:translateY(0)}}
-  .btn{background:var(--gold);color:var(--black);padding:16px 28px;border-radius:12px;text-decoration:none;font-weight:800;border:none;cursor:pointer;font-size:16px;
+ .btn{background:var(--gold);color:var(--black);padding:16px 28px;border-radius:12px;text-decoration:none;font-weight:800;border:none;cursor:pointer;font-size:16px;
       transition: all.3s ease; box-shadow:0 4px 15px rgba(217,119,6,.3)}
     /* ANIMATION: Button hover lift */
-  .btn:hover{transform:translateY(-4px) scale(1.05); box-shadow:0 8px 25px rgba(217,119,6,.4)}
-  .btn.btn-outline{background:transparent;color:var(--white);border:2px solid var(--white); box-shadow:none}
-  .btn.btn-outline:hover{background:var(--white);color:var(--black)}
+ .btn:hover{transform:translateY(-4px) scale(1.05); box-shadow:0 8px 25px rgba(217,119,6,.4)}
+ .btn.btn-outline{background:transparent;color:var(--white);border:2px solid var(--white); box-shadow:none}
+ .btn.btn-outline:hover{background:var(--white);color:var(--black)}
 
     section{padding:100px 5%;max-width:1100px;margin:auto; overflow:hidden}
-  .section-title{text-align:center;margin-bottom:40px;font-size:36px;font-weight:800}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
-  .card{background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);border-top:4px solid var(--gold);
+ .section-title{text-align:center;margin-bottom:40px;font-size:36px;font-weight:800}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+ .card{background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);border-top:4px solid var(--gold);
       transition: all.4s ease; cursor:pointer}
     /* ANIMATION: Card hover lift */
-  .card:hover{transform:translateY(-10px); box-shadow:0 20px 40px rgba(217,119,6,.2)}
-  .card h3{color:var(--black);margin-bottom:12px;font-size:20px}
-  .card li{margin-bottom:8px; font-size:15px; list-style:none; padding-left:20px; position:relative}
-  .card li::before{content:"• "; color:var(--gold); font-weight:bold; position:absolute; left:0}
+ .card:hover{transform:translateY(-10px); box-shadow:0 20px 40px rgba(217,119,6,.2)}
+ .card h3{color:var(--black);margin-bottom:12px;font-size:20px}
+ .card li{margin-bottom:8px; font-size:15px; list-style:none; padding-left:20px; position:relative}
+ .card li::before{content:"• "; color:var(--gold); font-weight:bold; position:absolute; left:0}
 
     footer{background:var(--black);color:#cbd5e1;text-align:center;padding:40px 5%;font-size:14px}
     hr{border:none; border-top:1px solid #e5e7eb; margin:40px 0}
@@ -129,29 +129,76 @@
     </div>
   </section>
 
-  <!-- SEHEMU MPYA YA MALIPO NMB -->
+  <!-- SEHEMU MPYA YA TICKETS CART 4 -->
   <section id="tickets" style="background:var(--black); color:var(--white); text-align:center">
-    <h2 class="section-title reveal" style="color:var(--white)">🎟️ Nunua Ticket Yako Sasa</h2>
-    <div class="reveal" style="transition-delay:.1s; max-width:600px; margin:auto">
-      <p>Bonyeza kitufe hapa chini. Utatumwa kwenye ukurasa salama wa NMB Bank kulipia kwa kadi ya benki, Mastercard, Visa, au Mobile Money.</p>
+    <h2 class="section-title reveal" style="color:var(--white)">🎟️ Chagua Ticket Yako</h2>
+    <p class="reveal" style="transition-delay:.1s; max-width:700px; margin:auto; margin-bottom:40px; color:#cbd5e1">
+      Ungana nasi Asali Wild Screen Festival. Lipa salama kupitia NMB Mastercard Gateway.
+    </p>
 
-      <div style="background:rgba(255,255,255,.05); padding:30px; border-radius:20px; margin:30px 0; border:1px solid rgba(217,119,6,.3)">
-        <img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="NMB Mastercard" style="height:50px; margin-bottom:20px; filter:brightness(0) invert(1)">
-        <p style="font-size:18px; margin-bottom:8px;"><strong>Bei ya Ticket: Tsh 10,000</strong></p>
-        <p style="font-size:14px; color:#cbd5e1; margin-bottom:24px;">Asali Wild Screen Festival 2026</p>
+    <div class="cards" style="max-width:1200px; margin:auto">
 
-        <!-- HII NDIO BUTTON YA MALIPO -->
-        <form id="paymentForm" action="#" method="post">
-          <input type="hidden" name="amount" value="10000">
-          <input type="hidden" name="currency" value="TZS">
-          <input type="hidden" name="orderId" value="ASALI-001">
-          <button type="submit" class="btn" style="width:100%; max-width:350px; font-size:18px; padding:18px">
-            💳 Lipa Sasa na NMB Gateway
-          </button>
+      <!-- CART 1: SHIRIKI VIBES -->
+      <div class="card reveal" style="background:rgba(255,255,255,.05); border:1px solid rgba(217,119,6,.3); border-top:4px solid var(--gold); text-align:center; transition-delay:.1s">
+        <h3 style="color:var(--gold)">🎉 Shiriki Vibes</h3>
+        <p style="font-size:32px; font-weight:800; margin:12px 0;">TSh 50,000</p>
+        <ul style="text-align:left; min-height:120px">
+          <li>General Access Festival Grounds</li>
+          <li>Open-air Film Screenings</li>
+          <li>Music & Cultural Performances</li>
+        </ul>
+        <form class="paymentForm" data-amount="50000" data-plan="Shiriki Vibes">
+          <button type="submit" class="btn" style="width:100%; margin-top:10px">💳 Lipa TSh 50K</button>
         </form>
-        <p style="font-size:12px; color:#94a3b8; margin-top:12px;">🔒 Malipo salama 100% - Powered by NMB Mastercard Gateway | MID: TEST993455000226</p>
       </div>
+
+      <!-- CART 2: VIP -->
+      <div class="card reveal" style="background:rgba(255,255,255,.05); border:1px solid rgba(217,119,6,.3); border-top:4px solid var(--gold); text-align:center; transform:scale(1.05); transition-delay:.2s">
+        <h3 style="color:var(--gold)">⭐ VIP</h3>
+        <p style="font-size:32px; font-weight:800; margin:12px 0;">TSh 100,000</p>
+        <ul style="text-align:left; min-height:120px">
+          <li>Everything in Vibes +</li>
+          <li>VIP Seating Area</li>
+          <li>Welcome Drink & Snacks</li>
+          <li>Fast Track Entry</li>
+        </ul>
+        <form class="paymentForm" data-amount="100000" data-plan="VIP">
+          <button type="submit" class="btn" style="width:100%; margin-top:10px">💳 Lipa TSh 100K</button>
+        </form>
+      </div>
+
+      <!-- CART 3: PLATINUM -->
+      <div class="card reveal" style="background:rgba(255,255,255,.05); border:1px solid rgba(217,119,6,.3); border-top:4px solid var(--gold); text-align:center; transition-delay:.3s">
+        <h3 style="color:var(--gold)">💎 Platinum</h3>
+        <p style="font-size:32px; font-weight:800; margin:12px 0;">$100 USD</p>
+        <ul style="text-align:left; min-height:120px">
+          <li>Everything in VIP +</li>
+          <li>Backstage Access</li>
+          <li>Meet & Greet with Artists</li>
+          <li>Exclusive Gift Pack</li>
+        </ul>
+        <form class="paymentForm" data-amount="100" data-currency="USD" data-plan="Platinum">
+          <button type="submit" class="btn" style="width:100%; margin-top:10px">💳 Lipa $100</button>
+        </form>
+      </div>
+
+      <!-- CART 4: WILDSCREEN FUND -->
+      <div class="card reveal" style="background:rgba(255,255,255,.05); border:1px solid rgba(217,119,6,.3); border-top:4px solid var(--gold); text-align:center; transition-delay:.4s">
+        <h3 style="color:var(--gold)">🐝 WILDSCREEN FUND</h3>
+        <p style="font-size:18px; font-weight:600; margin:12px 0;">Support the Culture</p>
+        <ul style="text-align:left; min-height:120px">
+          <li>Donate to support young artists</li>
+          <li>Fund community honey projects</li>
+          <li>Keep Tabora stories alive</li>
+        </ul>
+        <form class="paymentForm" data-amount="0" data-plan="Wildscreen Fund">
+          <input type="number" name="donation" placeholder="Enter Amount TSh" style="width:100%; padding:12px; border-radius:8px; border:1px solid #ccc; margin-bottom:10px; text-align:center; color:var(--black)">
+          <button type="submit" class="btn btn-outline" style="width:100%">🤝 Donate Now</button>
+        </form>
+      </div>
+
     </div>
+    <p style="font-size:12px; color:#94a3b8; margin-top:30px;">🔒 Malipo salama 100% - Powered by NMB Mastercard Gateway | MID: TEST993455000226</p>
   </section>
 
   <section id="visit">
@@ -202,16 +249,32 @@
   // Trigger once on load
   window.dispatchEvent(new Event('scroll'));
 
-  // JS for NMB Payment Button - TEST MODE
-  document.getElementById('paymentForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Zuia form isijitumie bado
+  // JS MPYA YA MALIPO CART 4
+  document.querySelectorAll('.paymentForm').forEach(form => {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
 
-    alert('TEST MODE ON\nHuu ni ukurasa wa majaribio.\n\nHatua inayofuata: NMB watakupa `checkoutId` kupitia API. \n\nUkishaupata, utabadilisha `action="#"` na kuweka link ya NMB hapa.');
+      let amount = this.dataset.amount;
+      let currency = this.dataset.currency || 'TZS';
+      let plan = this.dataset.plan;
 
-    // HAPA NDO ITAKUWA LINK YA NMB BAADA YA KUPEWA
-    // window.location.href = "https://test-nmbbank.mtf.gateway.mastercard.com/checkout/pay?checkoutId=XXX";
+      // Kama ni Fund, chukua amount kutoka input
+      if(plan === 'Wildscreen Fund'){
+        amount = this.querySelector('input[name="donation"]').value;
+        if(!amount || amount < 1000){
+          alert('Tafadhali weka kiasi cha angalau TSh 1000');
+          return;
+        }
+        currency = 'TZS';
+      }
+
+      alert(`TEST MODE ON\nUmechagua: ${plan}\nKiasi: ${currency} ${amount}\n\nHatua inayofuata: Tukiwa na \`checkoutId\` kutoka NMB, tutakupeleka kwenye ukurasa wao wa kulipia.`);
+
+      // HAPA NDO LINK YA NMB ITAKUJA BAADAE
+      // window.location.href = "https://test-nmbbank.mtf.gateway.mastercard.com/checkout/pay?amount="+amount+"&currency="+currency+"&checkoutId=XXX";
+    });
   });
 </script>
 
 </body>
-    </html>
+        </html>
