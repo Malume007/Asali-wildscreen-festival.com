@@ -14,34 +14,34 @@
     body{background:var(--white);color:var(--black);line-height:1.7}
 
     /* ANIMATION: Fade In Up + Scale */
- .reveal{opacity:0; transform:translateY(40px) scale(0.98); transition:all 1s cubic-bezier(.25,.46,.45,.94)}
- .reveal.active{opacity:1; transform:translateY(0) scale(1)}
+  .reveal{opacity:0; transform:translateY(40px) scale(0.98); transition:all 1s cubic-bezier(.25,.46,.45,.94)}
+  .reveal.active{opacity:1; transform:translateY(0) scale(1)}
 
     header{background:transparent;backdrop-filter:blur(0px);color:#fff;padding:18px 5%;position:fixed;top:0;left:0;right:0;z-index:50;transition:all.4s ease}
     /* ANIMATION: Header shrinks + Gold Glow */
     header.scrolled{background:rgba(15,23,42,.98);backdrop-filter:blur(10px);padding:10px 5%;box-shadow:0 0 25px rgba(255,179,0,.2)}
     header nav{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto}
- .logo-wrap{display:flex; align-items:center; gap:10px; text-decoration:none; transition:transform.3s}
- .logo-wrap:hover{transform:scale(1.05)}
- .logo-wrap span{font-size:16px; font-weight:900; color:var(--gold); letter-spacing:1px; text-shadow:0 0 10px rgba(255,179,0,.5)}
+  .logo-wrap{display:flex; align-items:center; gap:10px; text-decoration:none; transition:transform.3s}
+  .logo-wrap:hover{transform:scale(1.05)}
+  .logo-wrap span{font-size:16px; font-weight:900; color:var(--gold); letter-spacing:1px; text-shadow:0 0 10px rgba(255,179,0,.5)}
     header.scrolled.logo-wrap span{font-size:14px}
 
     /* MENU YA VIDOTI 3 */
- .dropdown{position:relative; display:inline-block}
- .menu-dots{font-size:28px; font-weight:800; color:var(--gold); cursor:pointer; padding:5px 10px; transition:.3s}
- .menu-dots:hover{transform:scale(1.2); color:var(--white)}
- .dropdown-content{display:none; position:absolute; right:0; background-color:var(--black); min-width:220px; box-shadow:0px 8px 25px rgba(255,179,0,.3); z-index:1; border-radius:12px; overflow:hidden; top:45px; border:2px solid var(--gold); opacity:0; transform:translateY(10px); transition:.4s}
- .dropdown-content a{color:var(--white); padding:15px 20px; text-decoration:none; display:block; font-weight:700; border-bottom:1px solid rgba(255,179,0,.2); transition:.3s}
- .dropdown-content a:hover{background-color:var(--gold); color:var(--black); padding-left:25px}
- .dropdown:hover.dropdown-content{display:block; opacity:1; transform:translateY(0)}
+  .dropdown{position:relative; display:inline-block}
+  .menu-dots{font-size:28px; font-weight:800; color:var(--gold); cursor:pointer; padding:5px 10px; transition:.3s}
+  .menu-dots:hover{transform:scale(1.2); color:var(--white)}
+  .dropdown-content{display:none; position:absolute; right:0; background-color:var(--black); min-width:220px; box-shadow:0px 8px 25px rgba(255,179,0,.3); z-index:1; border-radius:12px; overflow:hidden; top:45px; border:2px solid var(--gold); opacity:0; transform:translateY(10px); transition:.4s}
+  .dropdown-content a{color:var(--white); padding:15px 20px; text-decoration:none; display:block; font-weight:700; border-bottom:1px solid rgba(255,179,0,.2); transition:.3s}
+  .dropdown-content a:hover{background-color:var(--gold); color:var(--black); padding-left:25px}
+  .dropdown:hover.dropdown-content{display:block; opacity:1; transform:translateY(0)}
 
     /* HERO IMAGE MPYA CHINI YA LOGO */
- .hero-image{
+  .hero-image{
       width:100%;
       line-height:0;
       margin-top:82px; /* Inasukuma chini ili isifichwe na header fixed */
     }
- .hero-image img{
+  .hero-image img{
       width:100%;
       height:auto;
       display:block;
@@ -49,40 +49,40 @@
       object-fit:cover;
     }
 
- .hero{min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 5%;
+  .hero{min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 5%;
       background: linear-gradient(rgba(15,23,42,.8), rgba(15,23,42,.8)), url('images/hero-asalifestival.jpg') center/cover fixed no-repeat;
       animation:zoomBg 25s infinite alternate ease-in-out}
     @keyframes zoomBg{0%{background-size:100%}100%{background-size:115%}}
- .hero h1{font-size:56px;color:var(--white);font-weight:900;line-height:1.2;max-width:800px; animation:fadeInDown 1s ease; text-shadow:0 0 20px var(--black)}
- .hero p.tagline{font-size:22px;max-width:650px;margin:12px auto;color:var(--gold); font-style:italic; font-weight:800; animation:fadeInDown 1s ease.2s both}
- .hero p.sub{font-size:18px;max-width:650px;margin:18px auto;color:#e5e7eb; animation:fadeInDown 1s ease.4s both}
+  .hero h1{font-size:56px;color:var(--white);font-weight:900;line-height:1.2;max-width:800px; animation:fadeInDown 1s ease; text-shadow:0 0 20px var(--black)}
+  .hero p.tagline{font-size:22px;max-width:650px;margin:12px auto;color:var(--gold); font-style:italic; font-weight:800; animation:fadeInDown 1s ease.2s both}
+  .hero p.sub{font-size:18px;max-width:650px;margin:18px auto;color:#e5e7eb; animation:fadeInDown 1s ease.4s both}
     @keyframes fadeInDown{from{opacity:0; transform:translateY(-30px)} to{opacity:1; transform:translateY(0)}}
 
- .btns{display:flex; gap:15px; justify-content:center; margin-top:30px; flex-wrap:wrap; animation:fadeInUp 1s ease.6s both}
+  .btns{display:flex; gap:15px; justify-content:center; margin-top:30px; flex-wrap:wrap; animation:fadeInUp 1s ease.6s both}
     @keyframes fadeInUp{from{opacity:0; transform:translateY(30px)} to{opacity:1; transform:translateY(0)}}
- .btn{background:var(--gold);color:var(--black);padding:18px 32px;border-radius:50px;text-decoration:none;font-weight:900;border:2px solid var(--gold);cursor:pointer;font-size:16px;
+  .btn{background:var(--gold);color:var(--black);padding:18px 32px;border-radius:50px;text-decoration:none;font-weight:900;border:2px solid var(--gold);cursor:pointer;font-size:16px;
       transition: all.4s ease; box-shadow:0 5px 20px rgba(255,179,0,.4)}
- .btn:hover{transform:translateY(-6px) scale(1.08); background:transparent; color:var(--gold); box-shadow:0 10px 30px rgba(255,179,0,.6)}
- .btn-outline{background:transparent;color:var(--white);border:2px solid var(--white)}
- .btn-outline:hover{background:var(--white);color:var(--black)}
+  .btn:hover{transform:translateY(-6px) scale(1.08); background:transparent; color:var(--gold); box-shadow:0 10px 30px rgba(255,179,0,.6)}
+  .btn-outline{background:transparent;color:var(--white);border:2px solid var(--white)}
+  .btn-outline:hover{background:var(--white);color:var(--black)}
 
     section{padding:100px 5%;max-width:1100px;margin:auto; overflow:hidden}
- .section-title{text-align:center;margin-bottom:50px;font-size:38px;font-weight:900; color:var(--gold)}
- .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
- .card{background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.1);border-top:5px solid var(--gold);
+  .section-title{text-align:center;margin-bottom:50px;font-size:38px;font-weight:900; color:var(--gold)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+  .card{background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.1);border-top:5px solid var(--gold);
       transition: all.5s ease; cursor:pointer}
- .card:hover{transform:translateY(-15px); box-shadow:0 20px 40px rgba(255,179,0,.3)}
- .card h3{color:var(--black);margin-bottom:12px;font-size:20px; font-weight:800}
- .card li{margin-bottom:8px; font-size:15px; list-style:none; padding-left:20px; position:relative}
- .card li::before{content:"• "; color:var(--gold); font-weight:bold; position:absolute; left:0}
+  .card:hover{transform:translateY(-15px); box-shadow:0 20px 40px rgba(255,179,0,.3)}
+  .card h3{color:var(--black);margin-bottom:12px;font-size:20px; font-weight:800}
+  .card li{margin-bottom:8px; font-size:15px; list-style:none; padding-left:20px; position:relative}
+  .card li::before{content:"• "; color:var(--gold); font-weight:bold; position:absolute; left:0}
 
     /* SEHEMU MPYA YA QR CODE */
- .qr-section{background:var(--black); color:var(--white); padding:50px 5%; text-align:center; border-top:4px solid var(--gold)}
- .qr-section h2{font-size:32px; color:var(--gold); margin-bottom:15px}
- .qr-section p{max-width:600px; margin:auto; color:#cbd5e1; font-size:16px}
- .qr-box{display:inline-block; background:var(--white); padding:20px; border-radius:20px; margin-top:25px; border:4px solid var(--gold); transition:.5s; box-shadow:0 0 30px rgba(255,179,0,.3)}
- .qr-box:hover{transform:scale(1.05) rotate(-2deg); box-shadow:0 0 40px rgba(255,179,0,.5)}
- .qr-box img{width:220px; height:220px; display:block}
+  .qr-section{background:var(--black); color:var(--white); padding:50px 5%; text-align:center; border-top:4px solid var(--gold)}
+  .qr-section h2{font-size:32px; color:var(--gold); margin-bottom:15px}
+  .qr-section p{max-width:600px; margin:auto; color:#cbd5e1; font-size:16px}
+  .qr-box{display:inline-block; background:var(--white); padding:20px; border-radius:20px; margin-top:25px; border:4px solid var(--gold); transition:.5s; box-shadow:0 0 30px rgba(255,179,0,.3)}
+  .qr-box:hover{transform:scale(1.05) rotate(-2deg); box-shadow:0 0 40px rgba(255,179,0,.5)}
+  .qr-box img{width:220px; height:220px; display:block}
 
     footer{background:var(--black);color:#cbd5e1;text-align:center;padding:40px 5%;font-size:14px; border-top:2px solid var(--gold)}
     hr{border:none; border-top:1px solid #e5e7eb; margin:40px 0}
@@ -93,7 +93,7 @@
   <header id="navbar">
     <nav>
       <a href="#" class="logo-wrap">
-        <img src="images/logo-asalifestival.jpg" alt="Asali Wild Screen Logo" style="height:45px; width:45px; border-radius:50%; object-fit:cover; border:2px solid var(--gold)">
+        <img src="images/hero-asalifestival.jpg" alt="Logo" style="height:45px; width:45px; border-radius:50%; object-fit:cover; border:2px solid var(--gold)">
         <span>ASALI WILD SCREEN</span>
       </a>
       <!-- MENU YA VIDOTI 3 HAPA JUU -->
@@ -227,4 +227,4 @@
 </script>
 
 </body>
-      </html>
+  </html>
