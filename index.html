@@ -6,59 +6,59 @@
   <title>Asali Wild Screen Festival | Tabora, Tanzania</title>
   <style>
     :root{
-      --gold:#d97706; 
-      --black:#0f172a; 
+      --gold:#d97706;
+      --black:#0f172a;
       --white:#ffffff;
     }
     *{margin:0;padding:0;box-sizing:border-box;font-family: system-ui,-apple-system,Segoe UI,Arial,sans-serif; scroll-behavior:smooth}
     body{background:var(--white);color:var(--black);line-height:1.7}
-    
-    /* 1. ANIMATION: Fade In Up when scrolling */
-   .reveal{opacity:0; transform:translateY(30px); transition:all.8s ease}
-   .reveal.active{opacity:1; transform:translateY(0)}
+
+    /* ANIMATION: Fade In Up when scrolling */
+  .reveal{opacity:0; transform:translateY(30px); transition:all.8s ease}
+  .reveal.active{opacity:1; transform:translateY(0)}
 
     header{background:transparent;backdrop-filter:blur(0px);color:#fff;padding:18px 5%;position:fixed;top:0;left:0;right:0;z-index:50;transition:all.3s ease}
-    /* 2. ANIMATION: Header shrinks on scroll */
+    /* ANIMATION: Header shrinks on scroll */
     header.scrolled{background:rgba(15,23,42,.95);backdrop-filter:blur(8px);padding:10px 5%;box-shadow:0 4px 20px rgba(0,0,0,.2)}
     header nav{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto}
-   .logo-wrap{display:flex; align-items:center; gap:10px; text-decoration:none; transition:transform.3s}
-   .logo-wrap:hover{transform:scale(1.05)}
-   .logo-wrap span{font-size:16px; font-weight:800; color:var(--gold); letter-spacing:.5px; transition:font-size.3s}
+  .logo-wrap{display:flex; align-items:center; gap:10px; text-decoration:none; transition:transform.3s}
+  .logo-wrap:hover{transform:scale(1.05)}
+  .logo-wrap span{font-size:16px; font-weight:800; color:var(--gold); letter-spacing:.5px; transition:font-size.3s}
     header.scrolled.logo-wrap span{font-size:14px}
     header a{color:#fff;text-decoration:none;margin-left:16px;font-size:14px;font-weight:600;position:relative}
     header a::after{content:''; position:absolute; width:0; height:2px; bottom:-4px; left:0; background-color:var(--gold); transition:width.3s}
     header a:hover::after{width:100%}
 
-   .hero{min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 5%; 
+  .hero{min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 5%;
       background: linear-gradient(rgba(15,23,42,.75), rgba(15,23,42,.75)), url('https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg') center/cover fixed no-repeat;
       animation:zoomBg 20s infinite alternate ease-in-out}
-    /* 3. ANIMATION: Background slow zoom */
+    /* ANIMATION: Background slow zoom */
     @keyframes zoomBg{0%{background-size:100%}100%{background-size:110%}}
-   .hero h1{font-size:52px;color:var(--white);font-weight:800;line-height:1.2;max-width:800px; animation:fadeInDown 1s ease}
-   .hero p.tagline{font-size:20px;max-width:650px;margin:12px auto;color:var(--gold); font-style:italic; font-weight:700; animation:fadeInDown 1s ease.2s both}
-   .hero p.sub{font-size:18px;max-width:650px;margin:18px auto;color:#e5e7eb; animation:fadeInDown 1s ease.4s both}
+  .hero h1{font-size:52px;color:var(--white);font-weight:800;line-height:1.2;max-width:800px; animation:fadeInDown 1s ease}
+  .hero p.tagline{font-size:20px;max-width:650px;margin:12px auto;color:var(--gold); font-style:italic; font-weight:700; animation:fadeInDown 1s ease.2s both}
+  .hero p.sub{font-size:18px;max-width:650px;margin:18px auto;color:#e5e7eb; animation:fadeInDown 1s ease.4s both}
     @keyframes fadeInDown{from{opacity:0; transform:translateY(-20px)} to{opacity:1; transform:translateY(0)}}
-    
-   .btns{display:flex; gap:12px; justify-content:center; margin-top:24px; flex-wrap:wrap; animation:fadeInUp 1s ease.6s both}
+
+  .btns{display:flex; gap:12px; justify-content:center; margin-top:24px; flex-wrap:wrap; animation:fadeInUp 1s ease.6s both}
     @keyframes fadeInUp{from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:translateY(0)}}
-   .btn{background:var(--gold);color:var(--black);padding:16px 28px;border-radius:12px;text-decoration:none;font-weight:800;border:none;cursor:pointer;font-size:16px;
+  .btn{background:var(--gold);color:var(--black);padding:16px 28px;border-radius:12px;text-decoration:none;font-weight:800;border:none;cursor:pointer;font-size:16px;
       transition: all.3s ease; box-shadow:0 4px 15px rgba(217,119,6,.3)}
-    /* 4. ANIMATION: Button hover lift */
-   .btn:hover{transform:translateY(-4px) scale(1.05); box-shadow:0 8px 25px rgba(217,119,6,.4)}
-   .btn.btn-outline{background:transparent;color:var(--white);border:2px solid var(--white); box-shadow:none}
-   .btn.btn-outline:hover{background:var(--white);color:var(--black)}
+    /* ANIMATION: Button hover lift */
+  .btn:hover{transform:translateY(-4px) scale(1.05); box-shadow:0 8px 25px rgba(217,119,6,.4)}
+  .btn.btn-outline{background:transparent;color:var(--white);border:2px solid var(--white); box-shadow:none}
+  .btn.btn-outline:hover{background:var(--white);color:var(--black)}
 
     section{padding:100px 5%;max-width:1100px;margin:auto; overflow:hidden}
-   .section-title{text-align:center;margin-bottom:40px;font-size:36px;font-weight:800}
-   .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
-   .card{background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);border-top:4px solid var(--gold);
+  .section-title{text-align:center;margin-bottom:40px;font-size:36px;font-weight:800}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+  .card{background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);border-top:4px solid var(--gold);
       transition: all.4s ease; cursor:pointer}
-    /* 5. ANIMATION: Card hover lift */
-   .card:hover{transform:translateY(-10px); box-shadow:0 20px 40px rgba(217,119,6,.2)}
-   .card h3{color:var(--black);margin-bottom:12px;font-size:20px}
-   .card li{margin-bottom:8px; font-size:15px; list-style:none; padding-left:20px; position:relative}
-   .card li::before{content:"• "; color:var(--gold); font-weight:bold; position:absolute; left:0}
-    
+    /* ANIMATION: Card hover lift */
+  .card:hover{transform:translateY(-10px); box-shadow:0 20px 40px rgba(217,119,6,.2)}
+  .card h3{color:var(--black);margin-bottom:12px;font-size:20px}
+  .card li{margin-bottom:8px; font-size:15px; list-style:none; padding-left:20px; position:relative}
+  .card li::before{content:"• "; color:var(--gold); font-weight:bold; position:absolute; left:0}
+
     footer{background:var(--black);color:#cbd5e1;text-align:center;padding:40px 5%;font-size:14px}
     hr{border:none; border-top:1px solid #e5e7eb; margin:40px 0}
   </style>
@@ -74,6 +74,7 @@
       <div>
         <a href="#about">About</a>
         <a href="#highlights">Highlights</a>
+        <a href="#tickets">Tickets</a>
         <a href="#visit">Visit</a>
         <a href="#contact">Contact</a>
       </div>
@@ -86,7 +87,7 @@
       <p class="tagline">Where Culture, Nature & Creativity Meet</p>
       <p class="sub">Tabora, Tanzania - The Land of Honey and Tobacco</p>
       <div class="btns">
-        <a href="#contact" class="btn">Join the Celebration</a>
+        <a href="#tickets" class="btn">Buy Ticket Now</a>
         <a href="#visit" class="btn btn-outline">Plan Your Visit</a>
       </div>
     </div>
@@ -128,6 +129,39 @@
     </div>
   </section>
 
+  <!-- SEHEMU MPYA YA MALIPO NMB -->
+  <section id="tickets" style="background:var(--black); color:var(--white); text-align:center">
+    <h2 class="section-title reveal" style="color:var(--white)">🎟️ Nunua Ticket Yako Sasa</h2>
+    <div class="reveal" style="transition-delay:.1s; max-width:600px; margin:auto">
+      <p>Bonyeza kitufe hapa chini. Utatumwa kwenye ukurasa salama wa NMB Bank kulipia kwa kadi ya benki, Mastercard, Visa, au Mobile Money.</p>
+
+      <div style="background:rgba(255,255,255,.05); padding:30px; border-radius:20px; margin:30px 0; border:1px solid rgba(217,119,6,.3)">
+        <img src="https://i.postimg.cc/6ysBr4vs/IMG-20260701-WA0012.jpg" alt="NMB Mastercard" style="height:50px; margin-bottom:20px; filter:brightness(0) invert(1)">
+        <p style="font-size:18px; margin-bottom:8px;"><strong>Bei ya Ticket: Tsh 10,000</strong></p>
+        <p style="font-size:14px; color:#cbd5e1; margin-bottom:24px;">Asali Wild Screen Festival 2026</p>
+
+        <!-- HII NDIO BUTTON YA MALIPO -->
+        <form id="paymentForm" action="#" method="post">
+          <input type="hidden" name="amount" value="10000">
+          <input type="hidden" name="currency" value="TZS">
+          <input type="hidden" name="orderId" value="ASALI-001">
+          <button type="submit" class="btn" style="width:100%; max-width:350px; font-size:18px; padding:18px">
+            💳 Lipa Sasa na NMB Gateway
+          </button>
+        </form>
+        <p style="font-size:12px; color:#94a3b8; margin-top:12px;">🔒 Malipo salama 100% - Powered by NMB Mastercard Gateway | MID: TEST993455000226</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <h2 class="section-title reveal">🏡 Stay with Us</h2>
+    <p class="reveal" style="transition-delay:.1s">Experience the warmth of Tabora through our handpicked eco-lodges, heritage inns, and community guesthouses. Enjoy comfort, authenticity, and nature — all within reach of the festival grounds.</p>
+    <hr>
+    <h2 class="section-title reveal">☀️ When to Visit</h2>
+    <p class="reveal" style="transition-delay:.1s"><strong>Festival Season:</strong> June – August (dry, sunny, perfect for outdoor screenings and tours).</p>
+  </section>
+
   <section id="contact" style="background:#fffbeb; text-align:center">
     <h2 class="section-title reveal">✨ Join the Celebration</h2>
     <div class="reveal" style="transition-delay:.1s">
@@ -167,7 +201,17 @@
   });
   // Trigger once on load
   window.dispatchEvent(new Event('scroll'));
+
+  // JS for NMB Payment Button - TEST MODE
+  document.getElementById('paymentForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Zuia form isijitumie bado
+
+    alert('TEST MODE ON\nHuu ni ukurasa wa majaribio.\n\nHatua inayofuata: NMB watakupa `checkoutId` kupitia API. \n\nUkishaupata, utabadilisha `action="#"` na kuweka link ya NMB hapa.');
+
+    // HAPA NDO ITAKUWA LINK YA NMB BAADA YA KUPEWA
+    // window.location.href = "https://test-nmbbank.mtf.gateway.mastercard.com/checkout/pay?checkoutId=XXX";
+  });
 </script>
 
 </body>
-  </html>
+    </html>
